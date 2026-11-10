@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="One private challenge. Twelve letters. Five chances.">
+  <title>WORDLE — The 12-letter challenge</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header><span class="edition">THE LONG GAME</span><h1>WORDLE</h1><button id="help" class="help" aria-label="How to play">?</button></header>
+  <main>
+    <section class="intro" aria-label="Challenge"><p class="eyebrow">A LITTLE LONGER. A LITTLE HARDER.</p><h2>12 letters. 5 chances.</h2><p>One secret sequence. Make every letter count.</p></section>
+    <div class="game-meta"><span>YOUR CHALLENGE</span><span id="attempt">ATTEMPT 1 OF 5</span></div>
+    <div id="board" role="group" aria-label="Guess grid: 5 rows of 12 letters"></div>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+    <div id="toast" role="status" aria-live="polite" hidden></div>
+    <section id="result" class="result" aria-live="polite" hidden><h2 id="result-title"></h2><p id="result-detail"></p></section>
+    <p id="guidance" class="guidance">Any 12 letters. No dictionary. Just deduction.</p>
+    <div id="keyboard" aria-label="On-screen keyboard"></div>
+    <div class="legend" aria-label="Tile colours"><span><i class="correct"></i>Right spot</span><span><i class="present"></i>Wrong spot</span><span><i class="absent"></i>Not available</span></div>
+    <p id="storage-warning" class="storage-warning" hidden>Progress can’t be saved in this browser. Keep this page open to retain your game.</p>
+  </main>
+  <footer>TWELVE LETTERS. ONE SHOT AT GLORY.</footer>
+  <dialog id="instructions"><button id="close-help" aria-label="Close instructions">×</button><h2>How to play</h2><p>Guess the secret 12-letter sequence in 5 attempts. Any combination of A–Z letters is accepted.</p><p>Type with your keyboard or tap the keys below. Press Enter to submit a full row; use Backspace to delete.</p><p>Green means the right letter in the right spot. Yellow means a letter belongs elsewhere. Grey means no unmatched copy remains.</p><p>Your progress stays in this browser. There are no retries, hints or answer reveals.</p><p>Ready? Make every letter count.</p></dialog>
+</body>
+</html>
